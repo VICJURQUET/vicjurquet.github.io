@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-l="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria Jurquet · Revenue Enablement & AI</title>
+<meta name="description" content="Victoria Jurquet — Revenue Enablement & IA aplicada a vendas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF8F3;--ink:#151515;--mute:#6B6B6B;--line:#E2DED5;--accent:#C2502F;--card:#FFFFFF}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+html[data-l=pt] .en,html[data-l=en] .pt{display:none!important}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+nav{position:sticky;top:0;z-index:10;background:rgba(250,248,243,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:'Instrument Serif',serif;font-size:24px;text-decoration:none}
+.links{display:flex;gap:26px;align-items:center;font-size:14px}
+.links a{text-decoration:none;color:var(--mute)}.links a:hover{color:var(--ink)}
+.lang{border:1px solid var(--ink);background:none;border-radius:99px;padding:5px 12px;font:500 12px Inter;cursor:pointer;letter-spacing:.06em}
+.lang:hover{background:var(--ink);color:var(--bg)}
+header{padding:120px 0 96px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:28px}
+h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(48px,8vw,104px);line-height:.98;letter-spacing:-.02em}
+h1 em{color:var(--accent)}
+.lead{max-width:640px;margin-top:32px;font-size:19px;font-weight:300;color:#333}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.chip{border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:13px;color:var(--mute);background:var(--card)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:40px;margin-bottom:48px}
+.num{font-size:13px;color:var(--mute);letter-spacing:.1em}
+h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,4.5vw,52px);line-height:1.05}
+.body{display:grid;grid-template-columns:200px 1fr;gap:40px}
+.body p{font-size:17px;max-width:680px;margin-bottom:16px;color:#2A2A2A}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cell{background:var(--bg);padding:30px}
+.cell h3{font-weight:600;font-size:16px;margin-bottom:8px}
+.cell p{font-size:15px;color:var(--mute);margin:0}
+.project{background:var(--card);border:1px solid var(--line);padding:40px}
+.tag{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
+.project h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:34px;line-height:1.1;margin-bottom:16px}
+.project p{font-size:16px;color:#333;margin-bottom:14px;max-width:none}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.pc{background:var(--card);border:1px solid var(--line);padding:32px;display:flex;flex-direction:column;transition:.2s}
+.pc:hover{border-color:var(--ink)}
+.pc h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15;margin-bottom:12px}
+.pc p{font-size:15px;color:#444;flex:1}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.stack span{font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:3px 10px;color:var(--mute)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
+.steps b{display:block;font-size:13px;margin-bottom:6px}
+.steps span{font-size:14px;color:var(--mute)}
+.list{list-style:none}
+.list li{display:grid;grid-template-columns:1fr auto;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.list li:last-child{border-bottom:1px solid var(--line)}
+.list strong{font-weight:600;display:block}
+.list small{color:var(--mute);font-size:14px}
+.list .r{color:var(--mute);font-size:14px;text-align:right;white-space:nowrap}
+.contact{padding:120px 0}
+.contact h2{font-size:clamp(44px,7vw,88px)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.btn{text-decoration:none;border:1px solid var(--ink);padding:14px 24px;border-radius:99px;font-size:15px;font-weight:500;transition:.2s}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+footer{padding:28px 0;font-size:13px;color:var(--mute)}
+@media(max-width:760px){
+ .links a{display:none}
+ .sec-head,.body{grid-template-columns:1fr;gap:12px}
+ .grid,.steps,.cards{grid-template-columns:1fr}
+ header{padding:80px 0 64px}section{padding:72px 0}
+ .project{padding:28px}
+ .list li{grid-template-columns:1fr}.list .r{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#" class="logo">Victoria Jurquet</a>
+  <div class="links">
+    <a href="#sobre"><span class="pt">Sobre</span><span class="en">About</span></a>
+    <a href="#atuacao"><span class="pt">Atuação</span><span class="en">Expertise</span></a>
+    <a href="#projetos"><span class="pt">Projetos</span><span class="en">Projects</span></a>
+    <a href="#contato"><span class="pt">Contato</span><span class="en">Contact</span></a>
+    <button class="lang" onclick="toggleLang()" aria-label="Switch language"><span class="pt">EN</span><span class="en">PT</span></button>
+  </div>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="eyebrow">Revenue Enablement · AI</div>
+  <h1><span class="pt">Transformo complexidade em <em>vendas</em>.</span><span class="en">I turn complexity into <em>revenue</em>.</span></h1>
+  <p class="lead">
+    <span class="pt">Revenue Enablement com foco em IA aplicada a times comerciais: programas de capacitação, sistemas de conteúdo reutilizáveis e agentes que fazem o conhecimento chegar a quem vende.</span>
+    <span class="en">Revenue Enablement professional focused on AI for sales teams. I design training programs, reusable content systems, and AI agents that get knowledge to the people who sell.</span>
+  </p>
+  <div class="meta">
+    <span class="chip">Sales Enablement</span><span class="chip">AI Agents & LLMs</span><span class="chip">Learning Design</span><span class="chip">Go-to-Market</span><span class="chip">Vibe Coding</span>
+  </div>
+</div></header>
+
+<section id="sobre"><div class="wrap">
+  <div class="sec-head"><div class="num">01</div><h2><span class="pt">Sobre</span><span class="en">About</span></h2></div>
+  <div class="body"><div></div><div>
+    <p class="pt">Sou Revenue Enabler Sênior e trabalho com times comerciais de vários segmentos, do SMB às grandes contas. Meu trabalho é traduzir produto, precificação e mercado em ferramentas que o time usa no dia a dia: trilhas de aprendizagem, playbooks, portais interativos e agentes de IA.</p>
+    <p class="en">I'm a Senior Revenue Enabler supporting sales teams across segments, from SMB to strategic accounts. My job is to translate product, pricing and market complexity into tools teams actually use every day: learning paths, playbooks, interactive portals and AI agents.</p>
+    <p class="pt">Tenho MBA em Gestão Estratégica e IA pela USP, com TCC sobre implementação de LLMs em chatbots. Gosto de construir. Boa parte das minhas entregas eu mesma desenho e programo, em HTML interativo e com IA.</p>
+    <p class="en">I hold an MBA in Strategic Management and AI from the University of São Paulo (USP), with a thesis on implementing LLMs in chatbots. I like to build: I design and code much of what I deliver myself, using interactive HTML and AI.</p>
+  </div></div>
+</div></section>
+
+<section id="atuacao"><div class="wrap">
+  <div class="sec-head"><div class="num">02</div><h2><span class="pt">O que eu faço</span><span class="en">What I do</span></h2></div>
+  <div class="grid">
+    <div class="cell"><h3><span class="pt">Programas de capacitação</span><span class="en">Structured training programs</span></h3><p><span class="pt">Trilhas, certificações por pilar de conhecimento e avaliações, com design pedagógico pensado para quem vende.</span><span class="en">Learning paths, knowledge-pillar certifications and assessments, designed for how sellers actually learn.</span></p></div>
+    <div class="cell"><h3><span class="pt">IA aplicada a Enablement</span><span class="en">AI for Enablement</span></h3><p><span class="pt">Agentes conversacionais que tiram dúvidas do time, skills e automações que escalam a produção de conteúdo.</span><span class="en">Conversational agents that answer team questions, plus skills and automations that scale content production.</span></p></div>
+    <div class="cell"><h3><span class="pt">Metodologia & GTM</span><span class="en">Sales methodology & GTM</span></h3><p><span class="pt">Pitch, tratamento de objeções, inteligência competitiva e materiais por vertical.</span><span class="en">Pitch, objection handling, competitive intelligence and vertical-specific playbooks.</span></p></div>
+    <div class="cell"><h3><span class="pt">Sistemas de conteúdo</span><span class="en">Content systems</span></h3><p><span class="pt">Templates, documentos vivos e portais interativos que se mantêm atualizados sem retrabalho.</span><span class="en">Templates, living documents and interactive portals that stay current without rework.</span></p></div>
+  </div>
+</div></section>
+
+<section id="projetos"><div class="wrap">
+  <div class="sec-head"><div class="num">03</div><h2><span class="pt">Projetos</span><span class="en">Projects</span></h2></div>
+  <p class="hint"><span class="pt">Clique em um projeto para ver o case técnico: problema, arquitetura, stack, decisões e aprendizados.</span><span class="en">Click a project to open the technical case study: problem, architecture, stack, decisions and learnings.</span></p>
+  <div class="filters" id="filters"></div>
+  <div class="cards" id="cards"></div>
+</div></section>
+
+<section id="stack"><div class="wrap">
+  <div class="sec-head"><div class="num">04</div><h2>Stack</h2></div>
+  <div class="stackgrid">
+    <div><h4><span class="pt">IA & agentes</span><span class="en">AI & agents</span></h4><p>LLM agents · Multi-agent routing · Claude (Skills) · Grok · Prompt design · Knowledge bases</p></div>
+    <div><h4><span class="pt">Automação & apps</span><span class="en">Automation & apps</span></h4><p>Google Apps Script · Web apps · Google Sheets / Slides / Drive / Sites · Slack API</p></div>
+    <div><h4>Front-end</h4><p>HTML · CSS · JavaScript · GitHub Pages · Lovable · iframe embeds</p></div>
+    <div><h4><span class="pt">Revenue stack</span><span class="en">Revenue stack</span></h4><p>HubSpot (CRM, Breeze, Quotes) · LearnWorlds (LMS) · Notion</p></div>
+  </div>
+</div></section>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-bg" onclick="closeCase()"></div>
+  <article class="panel" role="dialog" aria-modal="true">
+    <button class="x" onclick="closeCase()" aria-label="Fechar">×</button>
+    <div id="caseBody"></div>
+  </article>
+</div>
+
+<style>
+.hint{color:var(--mute);font-size:15px;margin:-24px 0 24px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;font:500 13px Inter;cursor:pointer;color:var(--mute)}
+.filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.pc{background:var(--card);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;cursor:pointer;transition:.2s;text-align:left;font:inherit;color:inherit}
+.pc:hover{border-color:var(--ink);transform:translateY(-2px)}
+.pc h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15;margin:4px 0 10px}
+.pc p{font-size:15px;color:#444;flex:1}
+.pc .more{margin-top:18px;font-size:13px;font-weight:600;color:var(--accent)}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.stack span{font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:3px 10px;color:var(--mute)}
+.stackgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.stackgrid>div{background:var(--bg);padding:28px}
+.stackgrid h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.stackgrid p{font-size:15px;color:#333}
+.modal{position:fixed;inset:0;z-index:50;display:none}
+.modal.open{display:block}
+.modal-bg{position:absolute;inset:0;background:rgba(20,20,20,.45)}
+.panel{position:absolute;top:0;right:0;height:100%;width:min(860px,100%);background:var(--bg);overflow-y:auto;padding:56px 56px 80px;animation:slide .25s ease}
+@keyframes slide{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
+.x{position:sticky;top:0;float:right;margin:-32px -24px 0 0;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:22px;cursor:pointer}
+.panel h2{font-size:clamp(32px,4vw,46px);margin:8px 0 14px}
+.panel .sum{font-size:18px;font-weight:300;color:#333;margin-bottom:28px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:36px}
+.facts div{background:var(--card);padding:16px 20px}
+.facts b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.facts span{font-size:14px}
+.panel h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
+.panel p.t{font-size:16px;color:#2A2A2A}
+.flow{display:flex;flex-direction:column;gap:0}
+.node{background:var(--card);border:1px solid var(--line);padding:12px 16px;font-size:14px;display:flex;gap:10px;flex-wrap:wrap}
+.node.split span{flex:1;min-width:140px;border-left:2px solid var(--accent);padding-left:10px}
+.node em{font-style:normal;font-size:11px;color:var(--mute);letter-spacing:.1em;text-transform:uppercase;width:100%}
+.arrow{height:22px;width:1px;background:var(--ink);margin-left:24px;position:relative}
+.arrow:after{content:'';position:absolute;bottom:-1px;left:-4px;border:4px solid transparent;border-top:6px solid var(--ink);border-bottom:0}
+.panel ul{list-style:none}
+.panel li{position:relative;padding:10px 0 10px 22px;border-top:1px solid var(--line);font-size:15px;color:#2A2A2A}
+.panel li:before{content:'→';position:absolute;left:0;color:var(--accent)}
+.panel li b{font-weight:600}
+@media(max-width:760px){.cards,.stackgrid,.facts{grid-template-columns:1fr}.panel{padding:48px 22px 64px}.hint{margin-top:-8px}}
+</style>
+
+<script>
+const P=[
+{id:'agente',cat:'ai',tag:{pt:'IA · Multiagente',en:'AI · Multi-agent'},
+ title:{pt:'Agente de IA que tira dúvidas do time comercial',en:'AI agent that answers sales team questions'},
+ sum:{pt:'Assistente multiagente que responde dúvidas de material, produto e direcionamento do time comercial, sempre com a fonte, integrado ao Slack.',en:'A multi-agent assistant that answers sales team questions on materials, product and next steps, always citing the source, integrated with Slack.'},
+ facts:{pt:[['Papel','Concepção, arquitetura, bases de conhecimento e evolução'],['Status','Em produção, em evolução contínua'],['Público','Time comercial e áreas de apoio'],['Canal','Slack (via API)']],en:[['Role','Concept, architecture, knowledge bases and iteration'],['Status','Live, continuously evolving'],['Users','Sales team and support functions'],['Channel','Slack (via API)']]},
+ problem:{pt:'As mesmas perguntas chegavam direto para mim, a maioria vinda de analistas e não da liderança. O time precisava de respostas rápidas, confiáveis e rastreáveis sem depender de uma pessoa.',en:'The same questions kept landing on me, mostly from individual contributors rather than leadership. The team needed fast, reliable, traceable answers without depending on one person.'},
+ flow:[{pt:'Pergunta do usuário (Slack)',en:'User question (Slack)'},{pt:'Bloco determinístico de entrada · roteamento',en:'Deterministic entry block · routing'},{split:[{pt:'Sub-agente Material → sempre devolve o link do material como botão',en:'Materials sub-agent → always returns the asset link as a button'},{pt:'Sub-agente Processo → triador de IA faz 1 pergunta de contexto',en:'Process sub-agent → AI triage asks 1 context question'}]},{split:[{pt:'Especialista CRM',en:'CRM specialist'},{pt:'Especialista Contratos',en:'Contracts specialist'},{pt:'Especialista Direcionamento',en:'Routing/next-steps specialist'}],label:{pt:'Agentes especialistas (base própria cada)',en:'Specialist agents (own knowledge base each)'}},{pt:'Resposta reescrita + link-fonte clicável · handoff automático se fora do domínio',en:'Rewritten answer + clickable source link · auto-handoff when out of domain'}],
+ decisions:{pt:['<b>Bases tabulares por agente.</b> Material: quando usar | título | link. Processo: domínio | pergunta | resposta | fonte.','<b>Material nunca responde o conteúdo, só entrega o link.</b> Isso evita resposta desatualizada e mantém a fonte da verdade no documento.','<b>Handoff automático</b> entre agentes quando a pergunta sai do domínio escolhido.','<b>Fallback sem transbordo humano:</b> sem resposta na base, o agente direciona para o time de Enablement.','<b>Três versões de arquitetura:</b> domínios fixos → 5 agentes → triador + 3 especialistas, conforme o volume e o tipo de pergunta mudavam.','<b>Escopo de processos migrado</b> para um agente de RevOps. Apoiei com a v1, templates, base de conhecimento e capacitação do time na plataforma.'],en:['<b>Tabular knowledge base per agent.</b> Materials: when to use | title | link. Process: domain | question | answer | source.','<b>The materials agent never answers with content, only the link.</b> This avoids stale answers and keeps the document as the source of truth.','<b>Automatic handoff</b> between agents when a question falls outside the chosen domain.','<b>No human fallback:</b> with no answer in the base, the agent routes people to the Enablement team.','<b>Three architecture iterations:</b> fixed domains → 5 agents → triage + 3 specialists, as volume and question types evolved.','<b>Process scope migrated</b> to a RevOps agent; I supported it with the v1, templates, knowledge base and platform training.']},
+ learn:{pt:['A expectativa da liderança (camada mais processual) era diferente da dos analistas, que são o maior público do agente.','Conforme o público cresceu, as perguntas mudaram: as pessoas perguntam ao agente o que não perguntavam diretamente.','O feedback contínuo foi o que moldou a arquitetura, mais do que o desenho inicial.'],en:['Leadership expected a process layer; individual contributors, the largest audience, needed something different.','As the audience grew, question types shifted: people ask the agent what they wouldn\'t ask a person.','Continuous feedback shaped the architecture more than the initial design did.']},
+ stack:['LLM agents','Multi-agent routing','Conversational AI platform','Slack API','Knowledge bases']},
+
+{id:'emblemas',cat:'learn',tag:{pt:'Learning design · Sistema',en:'Learning design · System'},
+ title:{pt:'Programa de certificações por emblemas',en:'Badge-based certification program'},
+ sum:{pt:'Sistema de certificação por pilares de conhecimento, em que cada emblema é uma trilha rastreável sobre um pool de cursos reutilizáveis.',en:'A certification system organized by knowledge pillars, where each badge is a trackable path over a pool of reusable courses.'},
+ facts:{pt:[['Papel','Dona do projeto: desenho, roadmap, produção e governança'],['Pilares','Processo · Vertical · Produto · Habilidades'],['Formato','Cursos de ~20 min a ~2 h'],['Plataforma','LMS (LearnWorlds)']],en:[['Role','Project owner: design, roadmap, production and governance'],['Pillars','Process · Vertical · Product · Skills'],['Format','Courses from ~20 min to ~2 h'],['Platform','LMS (LearnWorlds)']]},
+ problem:{pt:'O treinamento interrompia o dia a dia, não tinha uma trilha clara e não deixava comprovação do que cada pessoa sabia.',en:'Training interrupted the workday, had no clear path and left no proof of what each person knew.'},
+ flow:[{pt:'4 pilares de conhecimento',en:'4 knowledge pillars'},{pt:'Emblema = programa no LMS, com nível (Iniciante, Intermediário, Avançado)',en:'Badge = LMS program with a level (Beginner, Intermediate, Advanced)'},{pt:'Pool de cursos reutilizáveis (um curso pode compor vários emblemas)',en:'Pool of reusable courses (one course can belong to several badges)'},{split:[{pt:'Módulos em HTML interativo',en:'Interactive HTML modules'},{pt:'Questionário importado via template XLS',en:'Quiz imported via XLS template'},{pt:'Vídeo / desafio',en:'Video / challenge'}]},{pt:'Dashboard de progresso + página de portfólio embutida no hub',en:'Progress dashboard + portfolio page embedded in the hub'}],
+ decisions:{pt:['<b>Emblema como história, não como container.</b> Os cursos são certificações reutilizadas entre emblemas, o que evita duplicar conteúdo.','<b>Padrão fixo por tipo de curso.</b> Um curso de processo, por exemplo, tem sempre boas-vindas, passo a passo, vídeo, encerramento e questionário de 5 questões.','<b>Questionários gerados no template de importação do LMS</b>, um arquivo por curso, sem alterar a estrutura do template.','<b>Uma app por solução:</b> a página de emblemas nasce como app próprio embutido por iframe.','<b>Governança:</b> sugestão de emblemas obrigatórios por cargo e senioridade, alinhada com as BPs de cada área.','<b>Gamificação:</b> POC com a loja interna para usar os emblemas como reconhecimento.'],en:['<b>Badges as stories, not containers.</b> Courses are certifications reused across badges, which avoids duplicated content.','<b>Fixed blueprint per course type.</b> A process course, for example, always has welcome, step-by-step, video, wrap-up and a 5-question quiz.','<b>Quizzes generated in the LMS import template</b>, one file per course, without changing the template structure.','<b>One app per solution:</b> the badges page is its own app, embedded via iframe.','<b>Governance:</b> mandatory badges proposed by role and seniority, aligned with each area\'s HRBP.','<b>Gamification:</b> POC with the internal store to use badges as recognition.']},
+ learn:{pt:['Aprender não pode competir com bater meta: conteúdo curto e consumível sem parar o trabalho.','Rastreabilidade e comprovação deixam o processo de educação mais sofisticado e mostram o que cada pessoa já domina.','Emblemas também funcionam para áreas fora de vendas, por exemplo para garantir que quem recebe uma política nova a conhece.'],en:['Learning can\'t compete with hitting quota: content has to be short and consumable without stopping work.','Traceability and proof make education more mature and show what each person already masters.','Badges also work for non-sales areas, for example to make sure whoever receives a new policy actually knows it.']},
+ stack:['LearnWorlds','Interactive HTML','XLS import','Apps Script','Lovable','iframe']},
+
+{id:'skills',cat:'ai',tag:{pt:'IA · Automação',en:'AI · Automation'},
+ title:{pt:'Biblioteca de skills de IA para produção de conteúdo',en:'AI skill library for content production'},
+ sum:{pt:'Conjunto de skills no Claude que transformam materiais-fonte em cursos completos, questionários prontos para importar e fluxos conversacionais, sempre no mesmo padrão.',en:'A set of Claude skills that turn source materials into complete courses, import-ready quizzes and conversational flows, always to the same standard.'},
+ facts:{pt:[['Papel','Autora das skills e dos padrões'],['Escopo','Cursos, questionários, upload no LMS, fluxos, diagnóstico'],['Ferramenta','Claude (Skills)'],['Princípio','Nenhum dado inventado']],en:[['Role','Author of the skills and standards'],['Scope','Courses, quizzes, LMS upload, flows, diagnostics'],['Tool','Claude (Skills)'],['Principle','No invented data']]},
+ problem:{pt:'Produzir trilhas inteiras à mão, com padrão editorial e visual consistente entre verticais, não escalava.',en:'Hand-building full learning paths with consistent editorial and visual standards across verticals didn\'t scale.'},
+ flow:[{pt:'Materiais-fonte (dossiês, mapas de casos de uso)',en:'Source materials (dossiers, use-case maps)'},{pt:'Skill (SKILL.md com estrutura, regras e padrões)',en:'Skill (SKILL.md with structure, rules and standards)'},{split:[{pt:'HTMLs por módulo',en:'HTML per module'},{pt:'Questionário XLS',en:'XLS quiz'},{pt:'Descrição do curso',en:'Course description'}]},{pt:'Revisão humana',en:'Human review'},{pt:'Skill de upload: substitui o embed de cada atividade no LMS pelo navegador',en:'Upload skill: replaces each LMS activity embed via the browser'}],
+ decisions:{pt:['<b>Uma skill por tipo de curso:</b> Primeiros Passos (2 HTMLs + questionário), Casos de Uso (9 HTMLs + desafio) e GTM (15 HTMLs: boas-vindas, 14 módulos e referências).','<b>Skill de fluxo conversacional</b> com 3 fases obrigatórias (entrevista → confirmação do mapeamento → JSON pronto para importar na plataforma de bots).','<b>Skill de diagnóstico</b> que lê logs e eventos do agente para achar pergunta ignorada, resposta errada ou estado preso.','<b>Guardrails nas instruções:</b> sem dado real, a skill descreve a capacidade sem inventar número.','<b>Skills de manutenção</b> para hubs e portais: aplicam a mudança, mostram uma prévia e só publicam com aprovação.'],en:['<b>One skill per course type:</b> Getting Started (2 HTMLs + quiz), Use Cases (9 HTMLs + challenge) and GTM (15 HTMLs: welcome, 14 modules and references).','<b>Conversational-flow skill</b> with 3 mandatory phases (interview → mapping confirmation → import-ready JSON for the bot platform).','<b>Diagnostics skill</b> that reads agent logs and events to find ignored questions, wrong answers or stuck states.','<b>Guardrails in the instructions:</b> without real data, the skill describes the capability and never invents a number.','<b>Maintenance skills</b> for hubs and portals: apply the change, show a preview and only publish after approval.']},
+ learn:{pt:['O ganho está no padrão codificado, não no prompt avulso: a skill vira a documentação viva do processo.','Fases com confirmação humana evitam retrabalho em entregas longas.'],en:['The value is the codified standard, not one-off prompts: the skill becomes living process documentation.','Phases with human confirmation prevent rework on long deliverables.']},
+ stack:['Claude','Skills','Prompt design','Browser automation','JSON','XLS']},
+
+{id:'gerador',cat:'auto',tag:{pt:'Automação · Vendas',en:'Automation · Sales'},
+ title:{pt:'Gerador de propostas comerciais',en:'Sales proposal generator'},
+ sum:{pt:'Web app que monta a proposta a partir do plano, da faixa e das opções escolhidas, com preços puxados da tabela oficial e rastreio de cada proposta gerada.',en:'A web app that builds the proposal from the chosen plan, tier and options, pulling prices from the official price list and tracking every proposal generated.'},
+ facts:{pt:[['Papel','Produto, regras de negócio e construção'],['Templates','4 planos com template próprio'],['Idiomas','PT, EN e ES'],['Onde vive','Aba dentro do hub de materiais']],en:[['Role','Product, business rules and build'],['Templates','4 plans, each with its own template'],['Languages','PT, EN and ES'],['Where it lives','A tab inside the content hub']]},
+ problem:{pt:'As propostas eram montadas à mão, os preços podiam estar desatualizados e não havia como medir o impacto das propostas em negócios ganhos.',en:'Proposals were assembled by hand, prices could be outdated and there was no way to tie proposals to closed-won deals.'},
+ flow:[{pt:'Vendedor escolhe plano, faixa de preço e opções',en:'Seller picks plan, price tier and options'},{pt:'Web app (Apps Script)',en:'Web app (Apps Script)'},{pt:'Lê a Pricing List do mês (aba AAAA-MM, atualizada todo dia 05)',en:'Reads the monthly Pricing List (YYYY-MM tab, updated on the 5th)'},{pt:'Preenche o template do plano + slides de produto opcionais',en:'Fills the plan template + optional product slides'},{pt:'Log na planilha de acompanhamento',en:'Log to the tracking sheet'},{pt:'De-para com negócio ganho no CRM (empresa + e-mail do vendedor, janela de 12 meses)',en:'Match to closed-won deal in CRM (company + seller email, 12-month window)'}],
+ decisions:{pt:['<b>Sem ID do negócio obrigatório:</b> o vínculo com o CRM é feito depois por chave composta, sem atrito para quem vende.','<b>Internacionalização:</b> em EN e ES o template muda de idioma e os valores são digitados à mão (o único cenário que não lê a tabela de preços).','<b>Mockup de WhatsApp gerado na hora</b> conforme segmento e jornada, com a marca do cliente, porque uma imagem fixa não escala e a versão editável ficava feia.','<b>Versão nativa no CRM (HubSpot Breeze):</b> copia o template no Google Slides e preenche com dados do negócio e dos itens de linha, depois que a abordagem de gerar PPT foi substituída.','<b>Embutido no hub</b> adaptando-se ao visual dele, junto dos materiais de apoio.'],en:['<b>No mandatory deal ID:</b> the CRM link is resolved later with a composite key, so sellers face no friction.','<b>Internationalization:</b> in EN and ES the template switches language and values are entered manually (the only path that skips the price list).','<b>WhatsApp mockup rendered on the fly</b> by segment and journey, with the client\'s brand, since a static image doesn\'t scale and the editable version looked bad.','<b>CRM-native version (HubSpot Breeze):</b> copies the template in Google Slides and fills it with deal and line-item data, after replacing the earlier PPT-generation approach.','<b>Embedded in the hub</b>, adapting to its look and sitting next to the supporting materials.']},
+ learn:{pt:['Medir o ROI precisa estar no desenho desde a v1: a planilha de log é o que vai permitir provar o impacto.','Ancorar em produto quando não há economia financeira muda a forma de montar o comparativo.'],en:['Measuring ROI has to be designed in from v1: the log sheet is what will make the impact provable.','Anchoring on product when there are no savings changes how the comparison is built.']},
+ stack:['Google Apps Script','Google Sheets','Google Slides','HubSpot Breeze','i18n']},
+
+{id:'hub',cat:'auto',tag:{pt:'Sistema de conteúdo',en:'Content system'},
+ title:{pt:'Hub de materiais e processos',en:'Sales content & process hub'},
+ sum:{pt:'Hub privado que centraliza materiais, mercado, cases, processos e propostas, alimentado pela mesma base de conhecimento do agente de IA.',en:'A private hub centralizing materials, market intel, cases, processes and proposals, fed by the same knowledge base as the AI agent.'},
+ facts:{pt:[['Papel','Evolução, arquitetura e manutenção'],['Acesso','Privado, por time'],['Fonte','Planilha única de base de conhecimento'],['Arquitetura','Modular, com iframes']],en:[['Role','Evolution, architecture and maintenance'],['Access','Private, by team'],['Source','Single knowledge-base spreadsheet'],['Architecture','Modular, with iframes']]},
+ problem:{pt:'Os materiais estavam espalhados, era difícil saber o que era novo e os processos mudavam conforme o cargo de cada pessoa.',en:'Materials were scattered, it was hard to know what was new, and processes differed by role.'},
+ flow:[{pt:'Base de conhecimento (Google Sheets) · mesma do agente',en:'Knowledge base (Google Sheets) · shared with the agent'},{pt:'Web app Apps Script',en:'Apps Script web app'},{pt:'Google Sites com acesso restrito',en:'Access-restricted Google Sites'},{split:[{pt:'Abas nativas: Início, Empresa, Mercado, Cases, Links',en:'Native tabs: Home, Company, Market, Cases, Links'},{pt:'Apps independentes via iframe: Processos, Propostas, Emblemas',en:'Independent apps via iframe: Processes, Proposals, Badges'}]}],
+ decisions:{pt:['<b>Uma app por solução:</b> cada projeto vira um Apps Script próprio, embutido por iframe, para isolar falhas e facilitar a passagem de dono. A busca geral deixa de achar o conteúdo dos iframes, e esse trade-off foi aceito.','<b>"Novo" pela data de criação do arquivo no Drive</b>, não pela data de entrada na base, porque a migração em massa distorceria os destaques.','<b>Curadoria na planilha:</b> destaques marcados na própria base, com fluxo de sugestão, feedback e envio de material.','<b>"Como fazer" por cargo</b> nos processos, com menos cliques para ir e voltar, inclusive pela busca.','<b>Privado por design:</b> GitHub Pages foi descartado por exigência de acesso restrito.','<b>Capacitação do time</b> para alimentar a base e mexer no script sem quebrar nada.'],en:['<b>One app per solution:</b> each project is its own Apps Script embedded via iframe, isolating failures and easing handover. Global search no longer indexes iframe content, an accepted trade-off.','<b>"New" based on the file\'s Drive creation date</b>, not its entry date, because a bulk migration would distort highlights.','<b>Curation in the sheet:</b> highlights flagged in the base itself, plus suggestion, feedback and submission flows.','<b>Role-based "how to"</b> in processes, with fewer clicks to navigate, including via search.','<b>Private by design:</b> GitHub Pages was ruled out because access had to be restricted.','<b>Team training</b> so others can feed the base and edit the script without breaking it.']},
+ learn:{pt:['Uma fonte única de dados alimentando o hub e o agente evita versões conflitantes.','Modularizar cedo deixa a manutenção mais segura do que uma app monolítica.'],en:['A single data source feeding both hub and agent prevents conflicting versions.','Modularizing early makes maintenance safer than a monolithic app.']},
+ stack:['Google Apps Script','Google Sites','Google Sheets','Google Drive','iframe']},
+
+{id:'jornada',cat:'auto',tag:{pt:'Portal interativo',en:'Interactive portal'},
+ title:{pt:'Portal da jornada do cliente',en:'Customer journey portal'},
+ sum:{pt:'Portal interativo que documenta a jornada do cliente de ponta a ponta por segmento, do ponto de vista do CRM e de quem vende.',en:'An interactive portal documenting the end-to-end customer journey by segment, from the CRM and seller point of view.'},
+ facts:{pt:[['Papel','Desenho e desenvolvimento'],['Segmentos','SMB, Mid-market e Strategic accounts'],['Hospedagem','GitHub Pages → reaproveitado no hub'],['Formato','Single page em HTML/JS']],en:[['Role','Design and development'],['Segments','SMB, Mid-market and Strategic accounts'],['Hosting','GitHub Pages → reused in the hub'],['Format','Single-page HTML/JS']]},
+ problem:{pt:'Ninguém tinha uma visão única de como o cliente anda pelo funil, nem de quais etapas no CRM cada papel precisa cumprir.',en:'There was no single view of how a customer moves through the funnel, or which CRM steps each role must complete.'},
+ flow:[{pt:'Seleção do segmento',en:'Segment selection'},{pt:'Etapas da jornada',en:'Journey stages'},{split:[{pt:'Passos no CRM',en:'CRM steps'},{pt:'Visão do cliente',en:'Customer view'},{pt:'Orientação para quem vende',en:'Seller guidance'}]}],
+ decisions:{pt:['<b>Começou pelo SMB</b> e foi expandido por segmento.','<b>HTML estático e versionado</b> no GitHub, o que facilita iterar e publicar.','<b>Reaproveitado</b> como a consulta de processos dentro do hub, mostrando só o que está ativo hoje.','<b>Skill de atualização</b> para Google Sites: lê o HTML ao vivo, edita uma cópia local, gera prévia e só publica com aprovação.'],en:['<b>Started with SMB</b> and expanded segment by segment.','<b>Static, versioned HTML</b> on GitHub, which makes iterating and publishing easy.','<b>Reused</b> as the process lookup inside the hub, showing only what\'s currently active.','<b>Update skill</b> for Google Sites: reads the live HTML, edits a local copy, previews and only publishes after approval.']},
+ learn:{pt:['Documentar só o estado atual, sem histórico, reduz a confusão de quem consulta.'],en:['Documenting only the current state, with no history, reduces confusion for readers.']},
+ stack:['HTML','CSS','JavaScript','GitHub Pages','Google Sites']},
+
+{id:'outbound',cat:'ai',tag:{pt:'Pessoal · IA',en:'Side project · AI'},
+ title:{pt:'Multiagentes de outbound para geração de demanda',en:'Multi-agent outbound system for demand generation'},
+ sum:{pt:'Sistema de multiagentes no Grok que opera outbound no LinkedIn, implantado dentro da conta do próprio cliente. É um projeto em sociedade, com o primeiro cliente em operação.',en:'A multi-agent system on Grok that runs LinkedIn outbound, deployed inside the client\'s own account. I run it with a business partner, and the first client is live.'},
+ facts:{pt:[['Papel','Cofundadora: desenho dos agentes, implantação e capacitação'],['Status','Primeiro cliente em operação'],['Mercado-alvo','Empresas dos EUA'],['Modelo','Projeto de implantação + autonomia do cliente']],en:[['Role','Co-founder: agent design, deployment and enablement'],['Status','First client live'],['Target market','US companies'],['Model','Implementation project + client autonomy']]},
+ problem:{pt:'Ferramentas SaaS de outbound são caras e engessadas. A proposta é rodar o mesmo processo dentro do Grok do cliente, com custo menor e sem dependência de quem implantou.',en:'Outbound SaaS tools are expensive and rigid. The idea is to run the same process inside the client\'s own Grok, at lower cost and without depending on the implementers.'},
+ flow:[{pt:'Discovery: ICP, quem vende, persona, cases, clientes atuais, outbound atual, tamanho de mercado e ACV',en:'Discovery: ICP, sellers, persona, cases, current clients, current outbound, market size and ACV'},{pt:'Configuração dos agentes na conta do cliente (volume definido pelo ACV)',en:'Agent setup in the client\'s account (volume sized by ACV)'},{pt:'Operação de outbound no LinkedIn',en:'LinkedIn outbound operation'},{pt:'Ciclos de aprovação + capacitação do time',en:'Approval cycles + team enablement'},{pt:'Cliente opera sozinho',en:'Client runs it independently'}],
+ decisions:{pt:['<b>Conta do cliente, não nossa:</b> e-mail e cartão do cliente, sem lock-in.','<b>Formato em estudo:</b> 1 mês, com até 4 h de discovery na semana 1 e 3 semanas de aprovação e capacitação.','<b>Documentação como "segundo cérebro"</b> no Notion.'],en:['<b>Client\'s account, not ours:</b> client email and card, no lock-in.','<b>Format being tested:</b> 1 month, with up to 4 h of discovery in week 1 and 3 weeks of approvals and enablement.','<b>Documentation as a "second brain"</b> in Notion.']},
+ learn:{pt:['Enablement é parte do produto: o sistema só escala se o cliente souber operar sem a gente.'],en:['Enablement is part of the product: the system only scales if the client can run it without us.']},
+ stack:['Grok','Multi-agent','LinkedIn','Notion']},
+
+{id:'playbook',cat:'ai',tag:{pt:'Pessoal · Vibe coding',en:'Personal · Vibe coding'},
+ title:{pt:'Playbook interativo de vibe coding',en:'Interactive vibe coding playbook'},
+ sum:{pt:'Minha base de consulta pessoal, com soluções e padrões para construir com IA e trabalhar com o Claude de forma mais eficiente.',en:'My personal reference of solutions and patterns for building with AI and working with Claude more effectively.'},
+ facts:{pt:[['Papel','Autora'],['Uso','Consulta, não ferramenta diária'],['Hospedagem','GitHub'],['Foco','Processo de construção com IA']],en:[['Role','Author'],['Use','Reference, not a daily tool'],['Hosting','GitHub'],['Focus','Building with AI']]},
+ problem:{pt:'As soluções que eu encontrava construindo com IA se perdiam entre conversas e projetos.',en:'Solutions I found while building with AI got lost across chats and projects.'},
+ flow:[{pt:'Problema encontrado',en:'Problem found'},{pt:'Solução testada',en:'Tested solution'},{pt:'Registro no playbook',en:'Logged in the playbook'},{pt:'Reuso nos próximos projetos',en:'Reused in the next projects'}],
+ decisions:{pt:['<b>Interativo e versionado</b> no GitHub, em vez de notas soltas.'],en:['<b>Interactive and versioned</b> on GitHub instead of scattered notes.']},
+ learn:{pt:['O que eu documento vira matéria-prima para as skills.'],en:['What I document becomes raw material for skills.']},
+ stack:['HTML','GitHub','Claude']}
+];
+const CATS=[['all',{pt:'Todos',en:'All'}],['ai',{pt:'IA & agentes',en:'AI & agents'}],['auto',{pt:'Automação & apps',en:'Automation & apps'}],['learn',{pt:'Learning design',en:'Learning design'}]];
+let cur='all',open=null;
+const lg=()=>document.documentElement.dataset.l||'pt', T=o=>o[lg()];
+function renderCards(){
+  document.getElementById('filters').innerHTML=CATS.map(([k,l])=>`<button class="${k===cur?'on':''}" onclick="cur='${k}';renderCards()">${T(l)}</button>`).join('');
+  document.getElementById('cards').innerHTML=P.filter(p=>cur==='all'||p.cat===cur).map(p=>`<button class="pc" onclick="openCase('${p.id}')"><span class="tag">${T(p.tag)}</span><h3>${T(p.title)}</h3><p>${T(p.sum)}</p><div class="stack">${p.stack.slice(0,4).map(s=>`<span>${s}</span>`).join('')}</div><span class="more">${lg()==='pt'?'Ver case técnico →':'View technical case →'}</span></button>`).join('');
+}
+function flowHTML(f){return f.map(n=>n.split?`<div class="node split">${n.label?`<em>${T(n.label)}</em>`:''}${n.split.map(s=>`<span>${T(s)}</span>`).join('')}</div>`:`<div class="node">${T(n)}</div>`).join('<div class="arrow"></div>')}
+function openCase(id){
+  open=id;const p=P.find(x=>x.id===id),pt=lg()==='pt';
+  document.getElementById('caseBody').innerHTML=`<span class="tag">${T(p.tag)}</span><h2>${T(p.title)}</h2><p class="sum">${T(p.sum)}</p>
+  <div class="facts">${T(p.facts).map(([a,b])=>`<div><b>${a}</b><span>${b}</span></div>`).join('')}</div>
+  <h4>${pt?'O problema':'The problem'}</h4><p class="t">${T(p.problem)}</p>
+  <h4>${pt?'Arquitetura':'Architecture'}</h4><div class="flow">${flowHTML(p.flow)}</div>
+  <h4>${pt?'Decisões técnicas':'Technical decisions'}</h4><ul>${T(p.decisions).map(d=>`<li>${d}</li>`).join('')}</ul>
+  <h4>${pt?'Aprendizados':'Learnings'}</h4><ul>${T(p.learn).map(d=>`<li>${d}</li>`).join('')}</ul>
+  <h4>Stack</h4><div class="stack">${p.stack.map(s=>`<span>${s}</span>`).join('')}</div>`;
+  const m=document.getElementById('modal');m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';m.querySelector('.panel').scrollTop=0;
+}
+function closeCase(){open=null;const m=document.getElementById('modal');m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCase()});
+new MutationObserver(()=>{renderCards();if(open)openCase(open)}).observe(document.documentElement,{attributes:true,attributeFilter:['data-l']});
+renderCards();
+</script>
+
+<section><div class="wrap">
+  <div class="sec-head"><div class="num">05</div><h2><span class="pt">Palestras & formação</span><span class="en">Talks & education</span></h2></div>
+  <ul class="list">
+    <li><div><strong><span class="pt">Palestrante · evento corporativo interno</span><span class="en">Speaker · internal company event</span></strong><small><span class="pt">Apresentação de um agente de IA para dúvidas internas do time</span><span class="en">Presented an AI agent built to answer internal team questions</span></small></div><div class="r"><span class="pt">~5 mil convidados</span><span class="en">~5,000 attendees</span></div></li>
+    <li><div><strong><span class="pt">Palestrante · evento para parceiros</span><span class="en">Speaker · partner event</span></strong><small><span class="pt">Pitch de vendas para a rede de parceiros</span><span class="en">Sales pitch for the partner network</span></small></div><div class="r"><span class="pt">120 convidados</span><span class="en">120 attendees</span></div></li>
+    <li><div><strong><span class="pt">MBA em Gestão Estratégica e IA — USP</span><span class="en">MBA in Strategic Management & AI — USP</span></strong><small><span class="pt">TCC: implementação de LLMs em chatbots</span><span class="en">Thesis: implementing LLMs in chatbots</span></small></div><div class="r">MBA</div></li>
+    <li><div><strong><span class="pt">Idiomas</span><span class="en">Languages</span></strong><small><span class="pt">Português · Inglês · Francês · Espanhol (intermediário)</span><span class="en">Portuguese · English · French · Spanish (intermediate)</span></small></div><div class="r">4</div></li>
+  </ul>
+</div></section>
+
+<div id="contato" class="contact"><div class="wrap">
+  <div class="eyebrow"><span class="pt">Contato</span><span class="en">Contact</span></div>
+  <h2><span class="pt">Vamos <em style="color:var(--accent)">conversar</em>?</span><span class="en">Let's <em style="color:var(--accent)">talk</em>.</span></h2>
+  <div class="cta">
+    <a class="btn solid" href="https://www.linkedin.com/in/victoriajurquet/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="mailto:victoriabritojurquet@gmail.com">E-mail</a>
+    <a class="btn" href="https://github.com/VICJURQUET" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></div>
+
+<footer><div class="wrap">© 2026 Victoria Jurquet</div></footer>
+
+<script>
+function setLang(l){document.documentElement.dataset.l=l;document.documentElement.lang=l==='pt'?'pt-BR':'en';try{localStorage.setItem('l',l)}catch(e){}}
+function toggleLang(){setLang(document.documentElement.dataset.l==='pt'?'en':'pt')}
+(function(){var s;try{s=localStorage.getItem('l')}catch(e){}if(s){setLang(s)}else if(!(navigator.language||'').toLowerCase().startsWith('pt')){setLang('en')}})();
+</script>
+</body>
+</html>
